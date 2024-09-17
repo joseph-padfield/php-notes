@@ -22,11 +22,9 @@ echo "<br>";
 
 function awake($name, $surname, $awake)
 {
-    if ($awake===true)
-    {
+    if ($awake === true) {
         echo $name . " " . $surname . " is awake.";
-    }
-    else{
+    } else {
         echo $name . " " . $surname . " is not awake.";
     }
 }
@@ -43,45 +41,56 @@ $randomNumber = rand(-100, 100);
 
 echo "<br>";
 
-if ($randomNumber<0)
-{
+if ($randomNumber < 0) {
     echo $randomNumber . " is negative.";
-}
-else
-{
+} else {
     echo $randomNumber . " is positive.";
 }
 
 echo "<br>";
-$fruits = ['apple','pear','orange','banana','peach','strawberry'];
+$fruits = ['apple', 'pear', 'orange', 'banana', 'peach', 'strawberry'];
 
-foreach ($fruits as $fruit)
-{
+foreach ($fruits as $fruit) {
     echo $fruit . "<br>";
 }
 
-foreach (range(1,10) as $i)
-{
+foreach (range(1, 10) as $i) {
     echo $i;
 }
 
 echo "<br>";
 
-foreach (range(10,1) as $i)
-{
+foreach (range(10, 1) as $i) {
     echo $i;
 }
 echo "<br>";
-foreach ($fruits as $i=>$fruit)
-{
-    echo $i+1 . " : " . $fruit . "<br>";
+foreach ($fruits as $i => $fruit) {
+    echo $i + 1 . " : " . $fruit . "<br>";
 }
-echo "<br>";echo "<br>";
+echo "<br>";
+
+$myDetails = [
+    'name' => 'Jo',
+    'age' => '36',
+    'd.o.b.' => '11/08/1988',
+    'location' => 'Bath',
+    'Address' => 'Flat 4, 11 Darlington Street'
+];
+
+print_r($myDetails);
+echo'<br>';
+var_dump($myDetails);
+echo '<br><br>';
+foreach ($myDetails as $key => $value)
+{
+    echo $key . " : " . $value . "<br>";
+}
+echo '<br><br>';
 
 function circleArea($radius)
 {
-    $area = round(3.14159 * $radius**2, 2);
-    echo 'The area of a circle with a radius of ' . $radius . 'm is  '.$area .'m squared <br>';
+    $area = round(3.14159 * $radius ** 2, 2);
+    echo 'The area of a circle with a radius of ' . $radius . 'm is  ' . $area . 'm squared <br>';
 }
 
 circleArea(26);
@@ -97,6 +106,7 @@ echo "
 </form>
 ";
 
-echo $_GET['text'];
-
+if (isset($_GET['submit'])) {
+    echo $_GET['text'];
+}
 
